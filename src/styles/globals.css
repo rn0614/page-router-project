@@ -1,0 +1,146 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --main-color: #074684;
+  --sub1-color: #0e7cf4;
+  --sub2-color: #0ea5c6;
+  --sub3-color: #a0edf7;
+  --sub4-color: #f2efb6;
+  --sub5-color: #faf15d;
+}
+
+/* color */
+:root {
+  --green: #5ece7b;
+  --green-light: #9ee2b0;
+
+  --dark: #1d1f22;
+  --dark-light: #737680;
+
+  --gray: #a3a5ad;
+  --gray-light: #bebfc4;
+
+  --white: #fff;
+  --white-dark: #f1f2f3;
+}
+
+/* typography */
+:root {
+  --playfair: "Playfair", serif;
+  --raleway: "Raleway", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
+/* Heading font sizes */
+:root {
+  --h-1: 1.375rem; /* 22px */
+  --h-2: 1.375rem; /* 22px */
+  --h-3: 1rem; /* 16px */
+  --h-4: 1.125rem; /* 18px */
+  --h-5: 0.75rem; /* 12px */
+  --h-6: 0.75rem; /* 12px */
+}
+
+/* breakPoint */
+:root {
+  --md: 48rem; /* 768px */
+  --lg: 64rem; /* 1024px */
+  --xl: 80rem; /* 1280px */
+}
+
+/* global text color */
+:root {
+  --body-text-color: var(--dse-body-text-color, var(--dark));
+  --body-bg-color: var(--dse-body-bg-color, var(--white));
+}
+
+/* button */
+:root {
+  --btn-primary-color: var(--dse-btn-primary-color, var(--white));
+  --btn-primary-bg: var(--dse-btn-primary-bg, var(--green));
+  --btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, var(--green-light));
+}
+
+/* form */
+:root {
+  --form-color: var(--dse-form-color, var(--dark));
+  --form-bg: var(--dse-form-bg, var(--white));
+  --form-error-color: var(--dse-form-error-color, var(--red));
+  --form-error-border: var(--dse-form-erro-border, var(--red));
+  --form-border-focus-color: var(--dse-form-border-focus-color, var(--green));
+}
+
+/* body text sizes */
+:root {
+  --body-font-size: var(--des-body-font-size, var(--fs-sm));
+  --body-font-weight: var(--dse-body-font-weight, var(--fw-normal));
+}
+
+/* heading text */
+:root {
+  --h1-font-size: var(--dse-h1-font-size, var(--h-1));
+  --h2-font-size: var(--dse-h2-font-size, var(--h-2));
+  --h3-font-size: var(--dse-h3-font-size, var(--h-3));
+  --h4-font-size: var(--dse-h4-font-size, var(--h-4));
+  --h5-font-size: var(--dse-h5-font-size, var(--h-5));
+  --h6-font-size: var(--dse-h6-font-size, var(--h-6));
+}
+
+/* font weight */
+:root {
+  --h1-text-weight: var(--dse-h1-text-weight, var(--fw-black));
+  --h2-text-weight: var(--dse-h2-text-weight, var(--fw-semibold));
+  --h3-text-weight: var(--dse-h3-text-weight, var(--fw-bold));
+  --h4-text-weight: var(--dse-h4-text-weight, var(--fw-medium));
+  --h5-text-weight: var(--dse-h5-text-weight, var(--fw-normal));
+  --h6-text-weight: var(--dse-h6-text-weight, var(--fw-light));
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0;
+  /* color: #111111; */
+  font-family: sans-serif;
+}
+
+html,
+body {
+  font-size: 12px;
+  max-width: 100%;
+}
+
+@media (min-width: 48rem) {
+  html,body {
+    font-size: 14px;
+    color:red
+  }
+}
+
+@media (min-width: 64rem) {
+  html,body {
+    font-size: 16px;
+    color:blue;
+  }
+}
+
+@media (min-width: 80rem) {
+  html,body {
+    font-size: 18px;
+    color:green;
+  }
+}
+
+p {
+  word-break: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+}
