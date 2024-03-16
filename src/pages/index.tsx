@@ -1,11 +1,10 @@
-const NotFound = () => {
+const HomePage = ({}) => {
   return null;
 };
 
-export async function getServerSideProps({ res }:any) {
-  res.writeHead(302, { Location: '/home' });
+export async function getServerSideProps({ res }: any) {
+  res.writeHead(302, { Location: "/home" });
   res.end();
-  return null;
+  return {props: {}};
 }
-
-export default NotFound;
+export default HomePage;
