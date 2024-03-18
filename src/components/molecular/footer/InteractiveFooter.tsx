@@ -21,13 +21,14 @@ const MainFooter = styled.div`
     }
   }
 `;
+type InteractiveFooterProps={
+  nexPage:number
+}
 
-export default function InteractiveFooter() {
-  const currPage=1;
+export default function InteractiveFooter({nexPage}:InteractiveFooterProps) {
   return (
     <MainFooter>
-      <NextButton currPage={1}/>
-      {currPage === 1 ? <div>recoil로 현재 페이지 저장</div> : ""}
+      <NextButton currPage={nexPage}/>
     </MainFooter>
   );
 }

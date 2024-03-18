@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import RegisterForm from "@/components/molecular/modal/RegisterForm";
@@ -26,7 +25,12 @@ const MainFooter = styled.div`
   }
 `;
 
-export default function CrudFooter({ type = "ins", ...res }) {
+type CrudFooterProps={
+  type?:string;
+  nextPage:number;
+}
+
+export default function CrudFooter({ type = "ins",nextPage, ...res }:CrudFooterProps) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [portalElement, setPortalElement] = useState<Element | null>(null);
 
@@ -49,7 +53,7 @@ export default function CrudFooter({ type = "ins", ...res }) {
       <Button $size="xs" onClick={queryErrorHandler}>
         error make
       </Button>
-      <NextButton currPage={1}/>
+      <NextButton currPage={nextPage}/>
       {modalIsOpen && portalElement
         ? createPortal(
             <RegisterForm type={type} closeModal={closeModal} {...res} />,

@@ -22,22 +22,17 @@ export default function CrudPage() {
     <>
       <Head>
         <title>{`Koo's portfolio`}</title>
-        <meta
-          name="description"
-          content={"CRUD화면"}
-        />
+        <meta name="description" content={"CRUD화면"} />
       </Head>
       <StyledWraper>
         <MainHeader />
         <Template3>
-          <InviewMotion>
-            <CrudCardAlbum />
-          </InviewMotion>
+          <CrudCardAlbum />
           <InviewMotion>
             <CrudPageEx />
           </InviewMotion>
         </Template3>
-        <CrudFooter />
+        <CrudFooter nextPage={1}/>
       </StyledWraper>
     </>
   );

@@ -34,6 +34,11 @@ type Props = {
   targetAlbum: any;
 };
 
+const fetchingData = async (cardId:string)=>{
+  const albums = await getDetailCardAlbumFetch(cardId);
+  return albums
+}
+
 export default function CardDetailPage({ targetAlbum }: Props) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [portalElement, setPortalElement] = useState<Element | null>(null);
@@ -85,7 +90,7 @@ export default function CardDetailPage({ targetAlbum }: Props) {
             )
           : null}
       </StyledDetailCard>
-      <CrudFooter />
+      <CrudFooter nextPage={0}/>
     </>
   );
 }

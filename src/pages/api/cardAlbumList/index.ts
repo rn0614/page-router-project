@@ -8,6 +8,7 @@ export default async function handler(
   request: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log('cardAlbumlist1')
   if (request.method === "GET") {
     const { pagenum, limit } = request.query;
     const client = await queryCreate();

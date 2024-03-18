@@ -15,8 +15,6 @@ const InputComponent = styled((props: InputProps) =>React.createElement(`${props
     display: inline-block;
     border: 0;
     border-radius: 0;
-    width: auto;
-    height: auto;
     margin: 0 0.2rem 0 0;
   }
 `;

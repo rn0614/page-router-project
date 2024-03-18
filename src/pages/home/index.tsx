@@ -1,4 +1,3 @@
-import React from "react";
 import Template1 from "@/components/template/Template1";
 import PhotoMovetoMouse from "@/components/atoms/motion/PhotoMovetoMouse";
 import InviewMotion from "@/components/atoms/motion/InviewMotion";

@@ -28,7 +28,7 @@ export default function Interactive() {
           <MswExInfo2 />
         </Template3>
       </StyledFeed>
-      <InteractiveFooter />
+      <InteractiveFooter nexPage={6}/>
     </StyledWraper>
   );
 }

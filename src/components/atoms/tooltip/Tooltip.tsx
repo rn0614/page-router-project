@@ -15,7 +15,7 @@ const Container = styled.div`
 
   &:hover > .tooltip,
   &:active > .tooltip {
-    animation: ${tooltip} 0.8s 0.3s ease-in forwards;
+    animation: ${tooltip} 0.1s 0.1s ease-in forwards;
     visibility: visible;
   }
 `;

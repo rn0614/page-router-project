@@ -30,7 +30,7 @@ export default function Interactive() {
           <ColorChangeCar />
         </Template4>
       </StyledFeed>
-      <InteractiveFooter />
+      <InteractiveFooter nexPage={4} />
     </StyledWraper>
   );
 }

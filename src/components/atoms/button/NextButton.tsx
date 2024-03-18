@@ -41,7 +41,7 @@ const pageList = [
   { value: "interactive/threejs", name: "threejs" },
   { value: "peoplelist", name: "infinite Scroll" },
   { value: "msw", name: "msw and testing" },
-  { value: "", name: "go to home" },
+  { value: "home", name: "go to home" },
 ];
 
 type NextProps = {

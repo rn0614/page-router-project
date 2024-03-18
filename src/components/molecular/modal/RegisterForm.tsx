@@ -117,7 +117,7 @@ export default function RegisterForm({
   const updCardAlbum = useUpdCardAlbum();
   const settedImage = "https://koo-image-bucket.s3.ap-northeast-2.amazonaws.com/"+image
 
-  const [avatarPreview, setAvatarPreview] = useState(image===""?"/upload/default.jpg":settedImage);
+  const [avatarPreview, setAvatarPreview] = useState(image===""?"/images/upload/default.jpg":settedImage);
   const {
     register,
     handleSubmit,

@@ -13,13 +13,14 @@ interface CardAlbumProps {
   pre?: boolean;
 }
 export async function getCardAlbumFetch(pageNum: number, limit: number) {
+  console.log("useCardAlbum get list");
   const { data } = await axiosInstance.get(
     `/api/cardAlbumList?pagenum=${pageNum}&limit=${limit}`
   );
   return data;
 }
 
-export async function getDetailCardAlbumFetch(cardId:string) {
+export async function getDetailCardAlbumFetch(cardId: string) {
   const { data } = await axiosInstance.get(`/api/cardAlbumList/${cardId}`);
   return data;
 }
@@ -44,13 +45,9 @@ export function useCardAlbum({ pageNum, limit, pre = false }: CardAlbumProps) {
   return { albums };
 }
 
-export function DetailCardAlbum(cardId: string) {
-  async function getCardAlbumFetch() {
-    const { data } = await axiosInstance.get(`/api/cardAlbumList/${cardId}`);
-    return data;
-  }
+export function useDetailCardAlbum(cardId: string) {
   const { data: albums = [] } = useQuery([queryKeys.albumDetail], async () =>
-    getCardAlbumFetch()
+    getDetailCardAlbumFetch(cardId)
   );
   return { albums };
 }
@@ -62,9 +59,9 @@ export function useInsCardAlbum(): UseMutateFunction<
   unknown
 > {
   async function setCardAlbumFetch(card: CardAlbum) {
-    await axiosFormInstance.post("/api/cardAlbumList", {
+    await axiosFormInstance.post("/api/cardAlbumAdd", {
       title: card.title,
-      image: card.image[0],
+      avatarimage: card.image[0],
       description: card.description,
     });
   }
@@ -84,7 +81,7 @@ export function useUpdCardAlbum(): UseMutateFunction<
   unknown
 > {
   async function setCardAlbumFetch(card: CardAlbum) {
-    await axiosFormInstance.put("/api/cardAlbumList", {
+    await axiosFormInstance.put("/api/cardAlbumAdd", {
       id: card.id,
       title: card.title,
       image: card.image[0],
@@ -108,7 +105,7 @@ export function useDelCardAlbum(): UseMutateFunction<
 > {
   async function setCardAlbumFetch(id: string) {
     await axiosInstance.delete("/api/cardAlbumList", {
-      data: {id:id},  // fetching으로 넘어가는 데이터 object
+      data: { id: id }, // fetching으로 넘어가는 데이터 object
     });
   }
   const { mutate } = useMutation(setCardAlbumFetch, {

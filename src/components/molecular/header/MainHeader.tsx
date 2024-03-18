@@ -28,22 +28,17 @@ const MianHeader = styled.div<MobileMeNuOpen>`
     position: absolute;
     top: 5rem;
     z-index: 200;
+    
     a {
       background-color: #666666;
       cursor: pointer;
       text-align: center;
-      transition: 1s;
-      transform: translateX(
-        ${(props) => (props.$mobilemenuopen ? 0 : "-300vw")}
-      );
       &:hover {
         color: red;
         background-color: #888888;
-
-        
       }
       @media screen and (min-width :${({ theme }) => theme.breakPoint["mobile"]}) {
-          transform: translate(-300vw);
+          transform: translateX(-300vw);
         }
     }
   }
@@ -114,7 +109,7 @@ export default function MainHeader() {
           <Link className="logo" href="/home">
             <Image src={`/images/koologo3.svg`} priority alt="koologo" fill />
           </Link>
-          <div className="menu-wrapper">
+          <div className="menu-wrapper" style={{visibility:"hidden"}}>
             <Link href="/home" className="menu">
               about
             </Link>
@@ -128,7 +123,7 @@ export default function MainHeader() {
           />
         </MainHeaderContent>
       </Margin>
-      <div className="mobile-list">
+      <div className="mobile-list" style={{visibility:"hidden"}}>
         <Link href="/">about</Link>
         <a onClick={() => router.back()}>back</a>
       </div>
